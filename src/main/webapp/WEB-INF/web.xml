@@ -3,5 +3,38 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-</web-app>
+  <display-name>servletInfo</display-name>
+  
+  <context-param>
+  	<param-name>Usuario</param-name>
+  	<param-value>GNU</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>Senha</param-name>
+  	<param-value>123456</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>servletInfo</servlet-name>
+  	<display-name>servletInfo</display-name>
+  	<description>Este servlet serve para fazer nada!!</description>
+  	<servlet-class>br.edu.servlets.interfaces.servletInfo</servlet-class>
+  	<init-param>
+  		<param-name>info-servlet</param-name>
+  		<param-value>Informação do Servlet</param-value>
+  	</init-param>
+  </servlet>
+   
+  <servlet-mapping>
+  	<servlet-name>servletInfo</servlet-name>
+  	<url-pattern>/web/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  <servlet-mapping>
+  	<servlet-name>DispatcherServlet</servlet-name>
+  	<url-pattern>/*</url-pattern>
+  </servlet-mapping>
+  -->
+ </web-app>
